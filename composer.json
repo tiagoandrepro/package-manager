@@ -1,0 +1,19 @@
+{
+    "name": "tiagoandrepro/package-manager",
+    "description": "Gerenciador de pacote Laravel com Inertiajs",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tiagoandrepro\\PackageManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tiago André",
+            "email": "thiago_andre@live.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
