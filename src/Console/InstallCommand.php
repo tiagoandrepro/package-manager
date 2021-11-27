@@ -38,12 +38,21 @@ class InstallCommand extends Command
                 ] + $packages;
         });
 
+
+
         copy(__DIR__.'/../config.php', config_path('modules.php'));
 
         copy(__DIR__.'/../webpack.mix.js', base_path('webpack.mix.js'));
 
         copy(__DIR__.'/../resources/views/app.blade.php', resource_path('views/app.blade.php'));
         copy(__DIR__.'/../resources/js/app.js', resource_path('js/app.js'));
+
+        if(!(new Filesystem)->exists(resource_path('js/Pages'))){
+            (new Filesystem)->makeDirectory(resource_path('js/Pages'));
+        }
+
+
+
         $this->comment('Please execute the "npm install && npm run dev" command to build your assets.');
     }
 

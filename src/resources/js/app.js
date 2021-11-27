@@ -22,7 +22,7 @@ const app = createApp({
             const [packageName, packagePage] = name.split('::');
             const packageFolder = _.find(window.applicationModules, { name: packageName }).vendor;
 
-            return import(`../../modules/${packageFolder}/src/resources/js/Pages/${packagePage}.vue`).then(module => module.default)
+            return import(`/../vendor/${packageFolder}/src/resources/js/Pages/${packagePage}.vue`).then(module => module.default)
 
         },
     })
